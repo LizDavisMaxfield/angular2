@@ -4,10 +4,15 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
+import { ActivitiesComponent } from './activities/activities.component';
+import { GameComponent } from './game/game.component';
+import { LevelComponent } from './level/level.component';
+import { TestComponent } from './test/test.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent, 
+    ActivitiesComponent, GameComponent, LevelComponent, TestComponent
   ],
   imports: [
     BrowserModule,

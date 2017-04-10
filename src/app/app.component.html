@@ -1,3 +1,11 @@
-<h1>
-  {{title}}
-</h1>
+<div class="title">
+  <h1>
+    {{title}}
+  </h1>
+</div>
+<div class="response">
+  <input class="search" type="text" [(ngModel)]="response">
+  <p>{{response}} </p>
+</div>
+
+<app-activities></app-activities>
