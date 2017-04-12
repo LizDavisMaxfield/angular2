@@ -1,11 +1,18 @@
 <h2>
-  {{title}}
+  {{title}}{{getGameID()}}
 </h2>
+<input 
+  type="text"
+  [(ngModel)]="username">
+  <p *ngIf="username; else noUsername">{{username}}</p>
+  <ng-template #noUsername><p>Please Add a Username</p></ng-template>
+  <button (click)="onResetUsername()" [disabled]="!username" class="btn btn-primary" [innerText]="'Reset Username'"></button>
 <p>
+  <button class="btn btn-primary" (click)="onAddLevel()">Add Level</button>
+  <app-level level-object *ngFor="let level of levels"></app-level>
+  <!--<app-level></app-level>
   <app-level></app-level>
-    <app-level></app-level>
-      <app-level></app-level>
-        <app-level></app-level>
-          <app-level></app-level>
-            <app-level></app-level>
+  <app-level></app-level>
+  <app-level></app-level>
+  <app-level></app-level>-->
 </p>

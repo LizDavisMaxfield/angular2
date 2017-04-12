@@ -1,5 +1,22 @@
 <h1>{{title}}</h1>
-<app-game></app-game>
+<input 
+type="text"
+class="form-control"
+ (input)="onUpdateGameName($event)">
+<button 
+    class ="btn btn-primary"
+    [disabled]="!allowNewGame" 
+    (click)="onAddNewGame(gameAdded)" 
+    [innerText]="buttonText">
+</button>
+<input 
+    type="text"
+    class="form-control"
+    [(ngModel)]="gameAdded">
+    {{confirmMessage}}
+    {{games}}
+
+<app-game *ngFor let game of games></app-game>
 <div app-test></div>
 <app-game></app-game>
 <div app-test></div>
